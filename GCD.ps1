@@ -1,6 +1,6 @@
 
 # precisa modificar
-Function Get-ChromeDump{
+Function GCD{
 
   # só comentando para modificar
   
